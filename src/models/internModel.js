@@ -35,7 +35,7 @@ const internSchema = new mongoose.Schema({
         unique: [true,"This number is already registered"],
         validate: {
             validator: function (mobile) {
-                return  /^[0-9]{10}$/.test(mobile);
+                return   /^[2-9]\d{9}$/.test(mobile);
             },
             message: "Please enter a valid number"
         },

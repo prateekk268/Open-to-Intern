@@ -53,7 +53,7 @@ const createIntern = async function (req, res) {
                 })
             }
 
-            if (!/^[0-9]{10}$/.test(mobile))  {
+            if (! /^[2-9]\d{9}$/.test(mobile))  {
                 return res.status(400).send({ status: false, msg: "Enter a valid mobile number" })
             }
             let uniqueMobile=await internModel.findOne({mobile:data.mobile});// check for the mobile no already exist or not 
